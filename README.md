@@ -6,7 +6,8 @@ This project do a web testing automation with the cucumber library. The Page Obj
 As it is a POM model, for code readibility and reusability it is created with an architecture in 3 folders. Pages folder to provide views. utilities folder to provide useful methods, and a test folder to provide running methods or tests.   
 . 
 
-The main testing class is the so called Runner class coming from the runners library of the cucumber.   it is annotated with @RunEith(Cucumber.class) as well as the @CucumberOptions, where refers to the features folders ( it will make the connection via tags. the glue refers to the so-called Step Definitions, whic are the methods to created based on the Scenario. Actually, the terminal will suggest the method names and signatures as well.  These methods will come with the exception parts. Infact, the exception throws can be deleted for a better visualisation.
+The main testing class is the so called Runner class coming from the runners library of the cucumber.   it is annotated with @RunEith(Cucumber.class) as well as the @CucumberOptions, where refers to the features folders ( it will make the connection via tags. the glue refers to the so-called Step Definitions, whic are the methods to created based on the Scenario. Actually, a # dryRun=true will generateand in the terminal  the method names and signatures as well.  These methods will come with the exception parts. Infact, the exception throws can be deleted for a better visualisation.
+
 
 A feature file created in the resources directory serves as an link for the creation of the step methods to execute the test in the scenario. The main testing class is the so called Runner class coming from the runners library of the cucumber. 
 
