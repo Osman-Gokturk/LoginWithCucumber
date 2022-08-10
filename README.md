@@ -6,10 +6,9 @@ This project do a web testing automation with the cucumber library. The Page Obj
 As it is a POM model, for code readibility and reusability it is created with an architecture in 3 folders. Pages folder to provide views. utilities folder to provide useful methods, and a test folder to provide running methods or tests.   
 . 
 
-The main testing class is the so called Runner class coming from the runners library of the cucumber.   it is annotated with @RunEith(Cucumber.class) as well as the @CucumberOptions, where refers to the features folders ( it will make the connection via tags. the glue refers to the so-called Step Definitions, whic are the methods to created based on the Scenario. Actually, a # dryRun=true will generateand in the terminal  the method names and signatures as well.  These methods will come with the exception parts. Infact, the exception throws can be deleted for a better visualisation.
+The main testing class is the so called Runner class coming from the runners library of the cucumber.   it is annotated with @RunEith(Cucumber.class) as well as the @CucumberOptions, where refers to the features folders ( it will make the connection via tags. the glue refers to the so-called Step Definitions, whic are the methods to created based on the Scenario. Actually,  #a dryRun=true will generateand in the terminal  the method names and signatures as well.  These methods will come with the exception parts. Infact, the exception throws can be deleted for a better visualisation.
 
-
-A feature file created in the resources directory serves as an link for the creation of the step methods to execute the test in the scenario. The main testing class is the so called Runner class coming from the runners library of the cucumber. 
+An interesting aspect is the fact that stepDefinitions folders may contains seveveral java classes, actually the Runner will run ones whose name match with the ones in the scenatio which is the feature file.  A feature file created in the resources directory serves as an link for the creation of the step methods to execute the test in the scenario. The main testing class is the so called Runner class coming from the runners library of the cucumber. 
 
 * the pages folder contains:
   * 1-HomePage class to contain a constructor wich refer to the PageFactory.  This page contains web element "loginButton" to go to the login page
@@ -22,5 +21,7 @@ A feature file created in the resources directory serves as an link for the crea
   * Usefull methods classs. 
 
 
-* Tests Folder. 
+* We dont have tests folder, but the runners folder which contains the Runner class.  
   * one or more  test classes to run. One can write tests in the same class as well.
+
+* stepDefinitions folder contains the stepDefinition java classes which contains methods matching the Scenario or feature file.
