@@ -6,6 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions (
+        plugin={
+                "html: target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"
+        },
         features="./src/test/resources/features",
         glue="stepdefinitions", //path of the step definitions package.
         tags="@customer_login",  //only these will run. @customer_login is the tag of feature file.
